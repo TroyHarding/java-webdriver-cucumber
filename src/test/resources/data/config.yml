@@ -1,0 +1,11 @@
+infrastructure: selenoid
+hubUrl: localhost
+hubExternalUrl: localhost
+env: qa
+browser: chrome
+browserVersion: 114.0
+isHeadless: false
+implicitTimeout: 10
+pageLoadTimeout: 60
+explicitTimeout: 10
+explicitLongTimeout: 30
