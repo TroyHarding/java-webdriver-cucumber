@@ -26,7 +26,7 @@ Feature: xpaths solved
   @xpath3
   Scenario: Merriam-Webster Dictionary
     Given I open url "https://www.merriam-webster.com/"
-    Then I should see page title as "Dictionary by Merriam-Webster: America's most-trusted online dictionary"
+    Then I should see page title as "Merriam-Webster: America's Most Trusted Dictionary"
     Then element with xpath "//input[@id='search-term']" should be present
     When I type "cantankerous" into element with xpath "//input[@id='search-term']"
     Then I click on element using JavaScript with xpath "//button[@title='Search']"

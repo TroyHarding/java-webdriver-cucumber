@@ -35,7 +35,7 @@ Feature: Smoke steps
   @predefined4
   Scenario: Merriam-Webster Dictionary
     Given I open url "https://www.merriam-webster.com/"
-    Then I should see page title as "Dictionary by Merriam-Webster: America's most-trusted online Dictionary"
+    Then I should see page title as "Merriam-Webster: America's Most Trusted Dictionary"
     Then element with xpath "Search Bar" should be present
     When I type "cantankerous" into element with xpath "Search Bar"
     Then I click on element using JavaScript with xpath "Search Button"
