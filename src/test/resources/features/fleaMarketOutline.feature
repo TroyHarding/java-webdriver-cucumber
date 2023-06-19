@@ -19,6 +19,9 @@
       Then I verify title is "e-commerce – Automation Practice Website" for the page
       When I wait and click on a product "<product>" on the Landing Page
 
+
+
+
       Examples:
         |product|
         |AirPods Pro|
@@ -80,8 +83,26 @@
 ##    Verify the Confirmation Page and all of the information there
 ##    Do this for EACH Item
 #
-#  @flea14
-#  Scenario Outline: Checkout/Confirmation
-#    Given I visit FLEA Market in the "QA" Environment
+ @fleaOutline4
+    Scenario Outline: Checkout Flow/Confirmation Automation
+      Given I visit FLEA Market in the "QA" Environment
+      Then I tap on element <item> from Landing Page
+      Then I wait for "View Cart" to appear
+      Then I tap on "View Cart"
+      Then I should see the page title as "Cart – E-Market"
+      Then I go to "Proceed" button
+      And I enter "John" for the first name and "Doe" for the last name in the Name field "123-123-1234" for phone and "email@email.com" for email field
+      Then element "Place Order" should be present
+      Then I wait 10 sec
+      Then I press "Place Order" button
+      Then I verify we see the Confirmation Page title is "Checkout – E-Market"
+      Then I verify Order Details have <item1> item
+      Examples:
+      | item      | item1       |
+      | "AirPods" |"AirPods Pro" |
+      | "Watch"   |"Apple Watch Series 6" |
+      |"iMac"     |"iMac"  |
+      |"iPhone XR"|"iPhone XR"  |
+      |"Macbook Air"|"Macbook Air" |
+
 #
-#    Examples:
